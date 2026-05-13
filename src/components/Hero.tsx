@@ -9,7 +9,12 @@ const Hero = () => {
         <img 
           src="/Gemini_Generated_Image_itx35vitx35vitx3.png" 
           alt="Man in a tailored suit" 
-          className="w-full h-full object-cover opacity-60 object-top"
+          className="hidden md:block w-full h-full object-cover opacity-60 object-top"
+        />
+        <img 
+          src="/Gemini_Generated_Image_shjgv6shjgv6shjg.png" 
+          alt="Man in a tailored suit" 
+          className="md:hidden w-full h-full object-cover opacity-60 object-top"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent" />
       </div>
