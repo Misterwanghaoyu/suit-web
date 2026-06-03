@@ -2,9 +2,12 @@ import React from 'react';
 import { Search, User, ShoppingBag } from 'lucide-react';
 import Link from 'next/link';
 
-const Navbar = () => {
+const Navbar = ({ isHome = false }: { isHome?: boolean }) => {
+  const textColor = isHome ? 'text-white' : 'text-luxury-black';
+  const badgeBg = isHome ? 'bg-white text-black' : 'bg-luxury-black text-white';
+
   return (
-    <nav className="absolute top-0 left-0 w-full z-50 flex items-center justify-between px-10 py-6 text-white bg-transparent">
+    <nav className={`absolute top-0 left-0 w-full z-50 flex items-center justify-between px-10 py-6 ${textColor} bg-transparent`}>
       <div className="flex flex-col">
         <span className="text-2xl font-serif tracking-widest uppercase">Suitelite</span>
         <span className="text-[10px] tracking-[0.3em] uppercase opacity-80">Define Your Style</span>
@@ -30,7 +33,7 @@ const Navbar = () => {
         </button>
         <button aria-label="Shopping Cart" className="hover:opacity-60 transition-opacity relative">
           <ShoppingBag size={20} strokeWidth={1.5} />
-          <span className="absolute -top-1 -right-1 text-[8px] bg-white text-black rounded-full w-3 h-3 flex items-center justify-center font-bold">0</span>
+          <span className={`absolute -top-1 -right-1 text-[8px] ${badgeBg} rounded-full w-3 h-3 flex items-center justify-center font-bold`}>0</span>
         </button>
       </div>
     </nav>
