@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "name": "Silk Tie - Navy",
+    "price": "¥1,280",
+    "description": "真丝领带，经典海军蓝",
+    "image": "/images/accessory-1.jpg",
+    "category": "Tie"
+  },
+  {
+    "id": 2,
+    "name": "Leather Belt",
+    "price": "¥2,400",
+    "description": "意大利真皮皮带，手工缝制",
+    "image": "/images/accessory-2.jpg",
+    "category": "Belt"
+  },
+  {
+    "id": 3,
+    "name": "Cufflinks Set",
+    "price": "¥3,600",
+    "description": "袖扣套装，精致优雅",
+    "image": "/images/accessory-3.jpg",
+    "category": "Cufflinks"
+  },
+  {
+    "id": 4,
+    "name": "Pocket Square",
+    "price": "¥880",
+    "description": "真丝口袋巾，多种花色",
+    "image": "/images/accessory-4.jpg",
+    "category": "Pocket Square"
+  },
+  {
+    "id": 5,
+    "name": "Leather Wallet",
+    "price": "¥4,200",
+    "description": "手工皮夹，简约实用",
+    "image": "/images/accessory-5.jpg",
+    "category": "Wallet"
+  },
+  {
+    "id": 6,
+    "name": "Suspenders",
+    "price": "¥1,680",
+    "description": "真皮背带，复古时尚",
+    "image": "/images/accessory-6.jpg",
+    "category": "Suspenders"
+  },
+  {
+    "id": 7,
+    "name": "Leather Gloves",
+    "price": "¥2,800",
+    "description": "羊皮手套，温暖舒适",
+    "image": "/images/accessory-7.jpg",
+    "category": "Gloves"
+  },
+  {
+    "id": 8,
+    "name": "Watch Strap",
+    "price": "¥1,480",
+    "description": "真皮表带，多色可选",
+    "image": "/images/accessory-8.jpg",
+    "category": "Watch Strap"
+  }
+]

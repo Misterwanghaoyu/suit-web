@@ -1,5 +1,8 @@
 import Link from 'next/link';
+import { getInspirations } from '@/lib/data';
 
+// Static data structure (preserved for reference)
+/*
 const inspirations = [
   {
     id: 1,
@@ -50,8 +53,10 @@ const inspirations = [
     image: '/images/inspiration-6.jpg'
   }
 ];
+*/
 
 export default function InspirationPage() {
+  const inspirations = getInspirations();
   return (
     <main className="min-h-screen bg-white pt-24">
       {/* Hero Section */}

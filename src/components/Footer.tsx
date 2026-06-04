@@ -1,11 +1,25 @@
 "use client";
 
 import React from 'react';
-import { Send, Instagram, Youtube, ChevronUp } from 'lucide-react';
+import { Send, ChevronUp } from 'lucide-react';
+import { FOOTER_LINKS, BOTTOM_LINKS } from '@/constant/footer';
+import { SOCIAL_MEDIA_LINKS } from '@/constant/social';
+import { BRAND_CONFIG } from '@/config/brand';
 
 const Footer = () => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const renderSocialIcon = (icon: string) => {
+    switch (icon) {
+      case 'Instagram':
+        return <span className="text-[10px]">IG</span>;
+      case 'YouTube':
+        return <span className="text-[10px]">YT</span>;
+      default:
+        return <span className="text-[10px]">{icon}</span>;
+    }
   };
 
   return (
@@ -14,49 +28,34 @@ const Footer = () => {
         {/* Brand Info */}
         <div className="flex flex-col space-y-6">
           <div className="flex flex-col">
-            <span className="text-white text-xl font-serif tracking-widest uppercase">Suitelite</span>
-            <span className="text-[8px] tracking-[0.3em] uppercase opacity-60">Define Your Style</span>
+            <span className="text-white text-xl font-serif tracking-widest uppercase">{BRAND_CONFIG.name}</span>
+            <span className="text-[8px] tracking-[0.3em] uppercase opacity-60">{BRAND_CONFIG.tagline}</span>
           </div>
           <p className="text-[10px] leading-relaxed max-w-xs">
             我们相信，服装不仅是外在的表达，更是内在态度的延伸。Suitelite，陪伴你在每一个重要时刻自信从容。
           </p>
           <div className="flex space-x-4">
-            <div className="w-8 h-8 rounded-full border border-zinc-800 flex items-center justify-center hover:border-zinc-600 cursor-pointer transition-colors">
-              <span className="text-[10px]">W</span>
-            </div>
-            <div className="w-8 h-8 rounded-full border border-zinc-800 flex items-center justify-center hover:border-zinc-600 cursor-pointer transition-colors">
-              <span className="text-[10px]">W</span>
-            </div>
-            <div className="w-8 h-8 rounded-full border border-zinc-800 flex items-center justify-center hover:border-zinc-600 cursor-pointer transition-colors">
-              <Instagram size={14} />
-            </div>
-            <div className="w-8 h-8 rounded-full border border-zinc-800 flex items-center justify-center hover:border-zinc-600 cursor-pointer transition-colors">
-              <Youtube size={14} />
-            </div>
+            {SOCIAL_MEDIA_LINKS.map((social, index) => (
+              <div key={index} className="w-8 h-8 rounded-full border border-zinc-800 flex items-center justify-center hover:border-zinc-600 cursor-pointer transition-colors">
+                {renderSocialIcon(social.icon)}
+              </div>
+            ))}
           </div>
         </div>
 
-        {/* Links Column 1 */}
-        <div>
-          <h4 className="text-white text-xs tracking-widest uppercase mb-8">购物指南</h4>
-          <ul className="flex flex-col space-y-4 text-[11px] tracking-wider font-light">
-            <li className="hover:text-white cursor-pointer transition-colors">尺码指南</li>
-            <li className="hover:text-white cursor-pointer transition-colors">配送信息</li>
-            <li className="hover:text-white cursor-pointer transition-colors">退换政策</li>
-            <li className="hover:text-white cursor-pointer transition-colors">常见问题</li>
-          </ul>
-        </div>
-
-        {/* Links Column 2 */}
-        <div>
-          <h4 className="text-white text-xs tracking-widest uppercase mb-8">关于我们</h4>
-          <ul className="flex flex-col space-y-4 text-[11px] tracking-wider font-light">
-            <li className="hover:text-white cursor-pointer transition-colors">品牌故事</li>
-            <li className="hover:text-white cursor-pointer transition-colors">工艺与面料</li>
-            <li className="hover:text-white cursor-pointer transition-colors">门店查询</li>
-            <li className="hover:text-white cursor-pointer transition-colors">加入我们</li>
-          </ul>
-        </div>
+        {/* Links Columns */}
+        {FOOTER_LINKS.map((group, index) => (
+          <div key={index}>
+            <h4 className="text-white text-xs tracking-widest uppercase mb-8">{group.title}</h4>
+            <ul className="flex flex-col space-y-4 text-[11px] tracking-wider font-light">
+              {group.links.map((link, linkIndex) => (
+                <li key={linkIndex} className="hover:text-white cursor-pointer transition-colors">
+                  {link}
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
 
         {/* Newsletter */}
         <div>
@@ -77,11 +76,13 @@ const Footer = () => {
 
       {/* Bottom Bar */}
       <div className="pt-10 border-t border-zinc-900 flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0 text-[10px] tracking-[0.1em] uppercase">
-        <span>© 2024 SUITELITE. ALL RIGHTS RESERVED.</span>
+        <span>{BRAND_CONFIG.copyright}</span>
         <div className="flex space-x-8">
-          <span className="hover:text-white cursor-pointer transition-colors">隐私政策</span>
-          <span className="hover:text-white cursor-pointer transition-colors">使用条款</span>
-          <span className="hover:text-white cursor-pointer transition-colors">网站地图</span>
+          {BOTTOM_LINKS.map((link, index) => (
+            <span key={index} className="hover:text-white cursor-pointer transition-colors">
+              {link}
+            </span>
+          ))}
           <button 
             onClick={scrollToTop}
             className="flex items-center space-x-2 hover:text-white transition-colors"

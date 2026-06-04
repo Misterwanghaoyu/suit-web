@@ -1,6 +1,8 @@
 import React from 'react';
 import { Search, User, ShoppingBag } from 'lucide-react';
 import Link from 'next/link';
+import { NAVIGATION_ITEMS } from '@/constant/navigation';
+import { BRAND_CONFIG } from '@/config/brand';
 
 const Navbar = ({ isHome = false }: { isHome?: boolean }) => {
   const textColor = isHome ? 'text-white' : 'text-luxury-black';
@@ -9,19 +11,16 @@ const Navbar = ({ isHome = false }: { isHome?: boolean }) => {
   return (
     <nav className={`absolute top-0 left-0 w-full z-50 flex items-center justify-between px-10 py-6 ${textColor} bg-transparent`}>
       <div className="flex flex-col">
-        <span className="text-2xl font-serif tracking-widest uppercase">Suitelite</span>
-        <span className="text-[10px] tracking-[0.3em] uppercase opacity-80">Define Your Style</span>
+        <span className="text-2xl font-serif tracking-widest uppercase">{BRAND_CONFIG.name}</span>
+        <span className="text-[10px] tracking-[0.3em] uppercase opacity-80">{BRAND_CONFIG.tagline}</span>
       </div>
       
       <div className="hidden md:flex items-center space-x-8 text-sm font-light">
-        <Link href="/" className="hover:opacity-60 transition-opacity">首页</Link>
-        <Link href="/suits" className="hover:opacity-60 transition-opacity">西装</Link>
-        <Link href="/shirts" className="hover:opacity-60 transition-opacity">衬衫</Link>
-        <Link href="/t-shirts" className="hover:opacity-60 transition-opacity">T恤/POLO</Link>
-        <Link href="/outerwear" className="hover:opacity-60 transition-opacity">外套</Link>
-        <Link href="/accessories" className="hover:opacity-60 transition-opacity">配件</Link>
-        <Link href="/inspiration" className="hover:opacity-60 transition-opacity">穿搭灵感</Link>
-        <Link href="/about" className="hover:opacity-60 transition-opacity">品牌故事</Link>
+        {NAVIGATION_ITEMS.map((item) => (
+          <Link key={item.href} href={item.href} className="hover:opacity-60 transition-opacity">
+            {item.label}
+          </Link>
+        ))}
       </div>
 
       <div className="flex items-center space-x-6">

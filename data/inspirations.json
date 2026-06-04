@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "title": "商务精英",
+    "subtitle": "Business Excellence",
+    "description": "深色西装搭配白色衬衫，展现专业与权威",
+    "items": ["Classic Wool Blend", "Slim Fit Charcoal", "Classic White Oxford"],
+    "image": "/images/inspiration-1.jpg"
+  },
+  {
+    "id": 2,
+    "title": "休闲周末",
+    "subtitle": "Weekend Casual",
+    "description": "POLO衫配休闲裤，轻松自在不失格调",
+    "items": ["Premium Pique Polo", "Cashmere Blazer", "Leather Belt"],
+    "image": "/images/inspiration-2.jpg"
+  },
+  {
+    "id": 3,
+    "title": "晚宴礼服",
+    "subtitle": "Black Tie Event",
+    "description": "午夜蓝礼服配精致袖扣，优雅绅士之选",
+    "items": ["Navy Tuxedo", "French Cuff", "Cufflinks Set"],
+    "image": "/images/inspiration-3.jpg"
+  },
+  {
+    "id": 4,
+    "title": "都市时尚",
+    "subtitle": "Urban Style",
+    "description": "皮革夹克配修身裤，时尚前卫",
+    "items": ["Leather Jacket", "Slim Fit Blue", "Leather Gloves"],
+    "image": "/images/inspiration-4.jpg"
+  },
+  {
+    "id": 5,
+    "title": "夏日清爽",
+    "subtitle": "Summer Breeze",
+    "description": "亚麻材质，轻盈透气，夏日必备",
+    "items": ["Summer Linen", "Linen Summer", "Linen Blend Tee"],
+    "image": "/images/inspiration-5.jpg"
+  },
+  {
+    "id": 6,
+    "title": "秋冬温暖",
+    "subtitle": "Winter Warmth",
+    "description": "羊绒大衣配围巾，温暖与优雅并存",
+    "items": ["Cashmere Overcoat", "Pocket Square", "Leather Gloves"],
+    "image": "/images/inspiration-6.jpg"
+  }
+]

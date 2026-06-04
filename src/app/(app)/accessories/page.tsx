@@ -1,5 +1,8 @@
 import Link from 'next/link';
+import { getAccessories } from '@/lib/data';
 
+// Static data structure (preserved for reference)
+/*
 const accessories = [
   {
     id: 1,
@@ -66,8 +69,10 @@ const accessories = [
     category: 'Watch Strap'
   }
 ];
+*/
 
 export default function AccessoriesPage() {
+  const accessories = getAccessories();
   return (
     <main className="min-h-screen bg-white pt-24">
       {/* Hero Section */}

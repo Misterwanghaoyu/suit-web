@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight, MoveRight } from 'lucide-react';
+import { getCollectionItems } from '@/lib/data';
 
 interface CollectionItemProps {
   title: string;
@@ -26,13 +27,7 @@ const CollectionItem = ({ title, subtitle, image }: CollectionItemProps) => (
 );
 
 const Collection = () => {
-  const items = [
-    { title: "西装", subtitle: "SUITS", image: "https://images.unsplash.com/photo-1593032465175-481ac7f401a0?q=80&w=800&auto=format&fit=crop" },
-    { title: "衬衫", subtitle: "SHIRTS", image: "https://cdn.suitsupply.com/image/upload/ar_10:21,b_rgb:efefef,bo_200px_solid_rgb:efefef,c_pad,g_north,w_2600/b_rgb:efefef,c_lfill,g_north,dpr_1,h_1728,w_1440,f_auto,q_auto,fl_progressive/products/Shirts/default/Summer/H7507_1.jpg" },
-    { title: "T恤/POLO", subtitle: "T-SHIRTS", image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?q=80&w=800&auto=format&fit=crop" },
-    { title: "外套", subtitle: "OUTERWEAR", image: "https://cdn.suitsupply.com/image/upload/ar_10:21,b_rgb:efefef,bo_200px_solid_rgb:efefef,c_pad,g_north,w_2600/b_rgb:efefef,c_lfill,g_north,dpr_1,w_768,h_922,f_auto,q_auto,fl_progressive/products/Jackets/default/Summer/C2102_1.jpg" },
-    { title: "配件", subtitle: "ACCESSORIES", image: "https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?q=80&w=800&auto=format&fit=crop" },
-  ];
+  const items = getCollectionItems();
 
   return (
     <section className="py-24 px-10 md:px-24 bg-white">

@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "Cashmere Overcoat",
+    "price": "¥28,800",
+    "description": "纯羊绒大衣，温暖与优雅并存",
+    "image": "/images/outerwear-1.jpg",
+    "category": "Coat"
+  },
+  {
+    "id": 2,
+    "name": "Wool Blend Blazer",
+    "price": "¥12,600",
+    "description": "羊毛混纺西装外套，商务休闲两相宜",
+    "image": "/images/outerwear-2.jpg",
+    "category": "Blazer"
+  },
+  {
+    "id": 3,
+    "name": "Leather Jacket",
+    "price": "¥18,900",
+    "description": "意大利真皮夹克，经典永恒",
+    "image": "/images/outerwear-3.jpg",
+    "category": "Jacket"
+  },
+  {
+    "id": 4,
+    "name": "Trench Coat",
+    "price": "¥15,800",
+    "description": "风衣经典款，英伦风情",
+    "image": "/images/outerwear-4.jpg",
+    "category": "Coat"
+  },
+  {
+    "id": 5,
+    "name": "Down Vest",
+    "price": "¥8,600",
+    "description": "轻薄羽绒背心，保暖不臃肿",
+    "image": "/images/outerwear-5.jpg",
+    "category": "Vest"
+  },
+  {
+    "id": 6,
+    "name": "Suede Jacket",
+    "price": "¥16,800",
+    "description": "麂皮夹克，质感非凡",
+    "image": "/images/outerwear-6.jpg",
+    "category": "Jacket"
+  }
+]

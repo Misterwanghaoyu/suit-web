@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "Classic White Oxford",
+    "price": "¥2,800",
+    "description": "经典牛津纺，商务百搭之选",
+    "image": "/images/shirt-1.jpg",
+    "category": "Business"
+  },
+  {
+    "id": 2,
+    "name": "Slim Fit Blue",
+    "price": "¥3,200",
+    "description": "修身剪裁，浅蓝色调，清新优雅",
+    "image": "/images/shirt-2.jpg",
+    "category": "Business"
+  },
+  {
+    "id": 3,
+    "name": "Egyptian Cotton",
+    "price": "¥4,500",
+    "description": "埃及长绒棉，极致柔软舒适",
+    "image": "/images/shirt-3.jpg",
+    "category": "Premium"
+  },
+  {
+    "id": 4,
+    "name": "Patterned Check",
+    "price": "¥3,600",
+    "description": "格纹设计，增添时尚活力",
+    "image": "/images/shirt-4.jpg",
+    "category": "Casual"
+  },
+  {
+    "id": 5,
+    "name": "French Cuff",
+    "price": "¥5,200",
+    "description": "法式袖口，正式场合首选",
+    "image": "/images/shirt-5.jpg",
+    "category": "Formal"
+  },
+  {
+    "id": 6,
+    "name": "Linen Summer",
+    "price": "¥2,400",
+    "description": "亚麻材质，透气清爽",
+    "image": "/images/shirt-6.jpg",
+    "category": "Casual"
+  }
+]

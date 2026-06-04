@@ -1,0 +1,11 @@
+[
+  {
+    "id": "1",
+    "email": "admin@suitelite.com",
+    "password": "$2a$12$ASOWXREWAbmWe8DYT/DJT./CN49MhCjiHoXSITZt67C6m/2NeONSe",
+    "name": "Super Admin",
+    "role": "super_admin",
+    "createdAt": "2024-01-01T00:00:00.000Z",
+    "isActive": true
+  }
+]

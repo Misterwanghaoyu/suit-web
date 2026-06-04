@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "Classic Wool Blend",
+    "price": "¥12,800",
+    "description": "意大利进口羊毛混纺，经典剪裁",
+    "image": "/images/suit-1.jpg",
+    "category": "Business"
+  },
+  {
+    "id": 2,
+    "name": "Slim Fit Charcoal",
+    "price": "¥15,600",
+    "description": "修身剪裁，炭灰色调，商务首选",
+    "image": "/images/suit-2.jpg",
+    "category": "Business"
+  },
+  {
+    "id": 3,
+    "name": "Navy Tuxedo",
+    "price": "¥18,900",
+    "description": "午夜蓝礼服，优雅绅士之选",
+    "image": "/images/suit-3.jpg",
+    "category": "Formal"
+  },
+  {
+    "id": 4,
+    "name": "Cashmere Blazer",
+    "price": "¥22,500",
+    "description": "纯羊绒面料，极致舒适体验",
+    "image": "/images/suit-4.jpg",
+    "category": "Casual"
+  },
+  {
+    "id": 5,
+    "name": "Double Breasted",
+    "price": "¥16,800",
+    "description": "双排扣设计，复古与现代的完美融合",
+    "image": "/images/suit-5.jpg",
+    "category": "Business"
+  },
+  {
+    "id": 6,
+    "name": "Summer Linen",
+    "price": "¥11,200",
+    "description": "亚麻材质，轻盈透气，夏日必备",
+    "image": "/images/suit-6.jpg",
+    "category": "Casual"
+  }
+]

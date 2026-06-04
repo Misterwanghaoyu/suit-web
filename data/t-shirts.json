@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "Classic Cotton Tee",
+    "price": "¥880",
+    "description": "100%纯棉，舒适百搭",
+    "image": "/images/tshirt-1.jpg",
+    "category": "Basic"
+  },
+  {
+    "id": 2,
+    "name": "Premium Pique Polo",
+    "price": "¥1,680",
+    "description": "珠地棉POLO，经典永恒",
+    "image": "/images/tshirt-2.jpg",
+    "category": "Polo"
+  },
+  {
+    "id": 3,
+    "name": "Slim Fit V-Neck",
+    "price": "¥1,080",
+    "description": "修身V领，简约时尚",
+    "image": "/images/tshirt-3.jpg",
+    "category": "Basic"
+  },
+  {
+    "id": 4,
+    "name": "Linen Blend Tee",
+    "price": "¥1,280",
+    "description": "亚麻混纺，夏日清爽",
+    "image": "/images/tshirt-4.jpg",
+    "category": "Summer"
+  },
+  {
+    "id": 5,
+    "name": "Cashmere Polo",
+    "price": "¥3,800",
+    "description": "羊绒POLO，极致奢华",
+    "image": "/images/tshirt-5.jpg",
+    "category": "Premium"
+  },
+  {
+    "id": 6,
+    "name": "Graphic Print Tee",
+    "price": "¥1,480",
+    "description": "艺术印花，个性表达",
+    "image": "/images/tshirt-6.jpg",
+    "category": "Fashion"
+  }
+]

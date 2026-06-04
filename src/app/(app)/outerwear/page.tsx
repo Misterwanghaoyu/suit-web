@@ -1,5 +1,8 @@
 import Link from 'next/link';
+import { getOuterwear } from '@/lib/data';
 
+// Static data structure (preserved for reference)
+/*
 const outerwear = [
   {
     id: 1,
@@ -50,8 +53,10 @@ const outerwear = [
     category: 'Jacket'
   }
 ];
+*/
 
 export default function OuterwearPage() {
+  const outerwear = getOuterwear();
   return (
     <main className="min-h-screen bg-white pt-24">
       {/* Hero Section */}
