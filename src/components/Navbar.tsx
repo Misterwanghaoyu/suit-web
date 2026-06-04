@@ -1,6 +1,6 @@
-import React from 'react';
 import { Search, User, ShoppingBag } from 'lucide-react';
 import Link from 'next/link';
+import { Button } from '@/components/ui/button';
 import { NAVIGATION_ITEMS } from '@/constant/navigation';
 import { BRAND_CONFIG } from '@/config/brand';
 
@@ -24,16 +24,16 @@ const Navbar = ({ isHome = false }: { isHome?: boolean }) => {
       </div>
 
       <div className="flex items-center space-x-6">
-        <button aria-label="Search" className="hover:opacity-60 transition-opacity">
+        <Button variant="ghost" size="icon" aria-label="Search" className="hover:opacity-60">
           <Search size={20} strokeWidth={1.5} />
-        </button>
-        <button aria-label="User Profile" className="hover:opacity-60 transition-opacity">
+        </Button>
+        <Button variant="ghost" size="icon" aria-label="User Profile" className="hover:opacity-60">
           <User size={20} strokeWidth={1.5} />
-        </button>
-        <button aria-label="Shopping Cart" className="hover:opacity-60 transition-opacity relative">
+        </Button>
+        <Button variant="ghost" size="icon" aria-label="Shopping Cart" className="hover:opacity-60 relative">
           <ShoppingBag size={20} strokeWidth={1.5} />
           <span className={`absolute -top-1 -right-1 text-[8px] ${badgeBg} rounded-full w-3 h-3 flex items-center justify-center font-bold`}>0</span>
-        </button>
+        </Button>
       </div>
     </nav>
   );

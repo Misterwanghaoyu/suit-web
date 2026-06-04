@@ -1,12 +1,11 @@
 'use client';
 
-import React from 'react';
 import { logoutAction } from '@/actions/admin/auth';
 
 export default function Header() {
   const handleLogout = async () => {
     await logoutAction();
-    window.location.href = '/admin/login';
+    window.location.href = '/login';
   };
 
   return (

@@ -1,6 +1,15 @@
 'use client';
 
 import React from 'react';
+import {
+  Table,
+  TableHeader,
+  TableBody,
+  TableHead,
+  TableRow,
+  TableCell,
+} from '@/components/ui/table';
+import { Button } from '@/components/ui/button';
 
 interface Column<T> {
   key: keyof T;
@@ -23,63 +32,57 @@ export default function DataTable<T extends { id: string | number }>({
 }: DataTableProps<T>) {
   return (
     <div className="overflow-x-auto">
-      <table className="min-w-full divide-y divide-gray-200">
-        <thead className="bg-gray-50">
-          <tr>
+      <Table>
+        <TableHeader>
+          <TableRow>
             {columns.map((column) => (
-              <th
-                key={String(column.key)}
-                className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
-              >
-                {column.header}
-              </th>
+              <TableHead key={String(column.key)}>{column.header}</TableHead>
             ))}
             {(onEdit || onDelete) && (
-              <th className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">
-                操作
-              </th>
+              <TableHead className="text-right">操作</TableHead>
             )}
-          </tr>
-        </thead>
-        <tbody className="bg-white divide-y divide-gray-200">
+          </TableRow>
+        </TableHeader>
+        <TableBody>
           {data.map((row) => (
-            <tr key={row.id} className="hover:bg-gray-50">
+            <TableRow key={row.id}>
               {columns.map((column) => (
-                <td
-                  key={String(column.key)}
-                  className="px-6 py-4 whitespace-nowrap text-sm text-gray-900"
-                >
+                <TableCell key={String(column.key)}>
                   {column.render
                     ? column.render(row[column.key], row)
                     : String(row[column.key])}
-                </td>
+                </TableCell>
               ))}
               {(onEdit || onDelete) && (
-                <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                <TableCell className="text-right">
                   {onEdit && (
-                    <button
+                    <Button
+                      variant="ghost"
+                      size="sm"
                       onClick={() => onEdit(row)}
-                      className="text-blue-600 hover:text-blue-900 mr-4"
+                      className="mr-2"
                     >
                       编辑
-                    </button>
+                    </Button>
                   )}
                   {onDelete && (
-                    <button
+                    <Button
+                      variant="ghost"
+                      size="sm"
                       onClick={() => onDelete(row)}
-                      className="text-red-600 hover:text-red-900"
+                      className="text-destructive hover:text-destructive"
                     >
                       删除
-                    </button>
+                    </Button>
                   )}
-                </td>
+                </TableCell>
               )}
-            </tr>
+            </TableRow>
           ))}
-        </tbody>
-      </table>
+        </TableBody>
+      </Table>
       {data.length === 0 && (
-        <div className="text-center py-12 text-gray-500">
+        <div className="text-center py-12 text-muted-foreground">
           暂无数据
         </div>
       )}

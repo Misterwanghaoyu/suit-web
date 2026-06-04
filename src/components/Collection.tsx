@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight, MoveRight } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 import { getCollectionItems } from '@/lib/data';
 
 interface CollectionItemProps {
@@ -36,10 +37,10 @@ const Collection = () => {
           <span className="text-[10px] tracking-[0.4em] uppercase text-zinc-400 mb-2">Collection</span>
           <h2 className="text-2xl font-serif tracking-widest">精选系列</h2>
         </div>
-        <button className="flex items-center space-x-2 text-[10px] tracking-widest uppercase hover:opacity-60 transition-opacity">
-          <span>查看全部</span>
-          <MoveRight size={14} />
-        </button>
+        <Button variant="ghost" size="sm">
+          <span className="text-[10px] tracking-widest uppercase">查看全部</span>
+          <MoveRight size={14} className="ml-2" />
+        </Button>
       </div>
 
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">

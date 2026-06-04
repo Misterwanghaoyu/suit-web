@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 const Lookbook = () => {
   return (
@@ -35,10 +36,10 @@ const Lookbook = () => {
             <p className="text-sm text-zinc-400 font-light mb-10 leading-relaxed">
               从经典商务到休闲日常，探索更多场合的着装灵感
             </p>
-            <button className="flex items-center space-x-4 border border-white/20 px-8 py-3 hover:bg-white hover:text-black transition-all duration-300 group">
+            <Button variant="outline" className="border-white/20 hover:bg-white hover:text-black">
               <span className="uppercase text-[10px] tracking-[0.2em]">探索穿搭灵感</span>
-              <ArrowRight size={16} className="group-hover:translate-x-2 transition-transform" />
-            </button>
+              <ArrowRight size={16} className="ml-4 group-hover:translate-x-2 transition-transform" />
+            </Button>
           </div>
         </div>
       </div>

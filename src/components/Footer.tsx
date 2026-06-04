@@ -2,6 +2,8 @@
 
 import React from 'react';
 import { Send, ChevronUp } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
 import { FOOTER_LINKS, BOTTOM_LINKS } from '@/constant/footer';
 import { SOCIAL_MEDIA_LINKS } from '@/constant/social';
 import { BRAND_CONFIG } from '@/config/brand';
@@ -62,14 +64,14 @@ const Footer = () => {
           <h4 className="text-white text-xs tracking-widest uppercase mb-8">订阅我们的资讯</h4>
           <p className="text-[10px] mb-6">获取新品发布和专属优惠信息</p>
           <div className="relative">
-            <input 
+            <Input 
               type="email" 
-              placeholder="输入你的邮箱" 
-              className="w-full bg-transparent border border-zinc-800 px-4 py-3 text-xs focus:outline-none focus:border-zinc-600 transition-colors"
+              placeholder="输入你的邮箱"
+              className="bg-transparent border-zinc-800 text-xs focus:border-zinc-600"
             />
-            <button className="absolute right-2 top-1/2 -translate-y-1/2 bg-zinc-800 p-2 hover:bg-zinc-700 transition-colors">
+            <Button size="icon" className="absolute right-1 top-1/2 -translate-y-1/2 bg-zinc-800 hover:bg-zinc-700 h-8 w-8">
               <Send size={14} />
-            </button>
+            </Button>
           </div>
         </div>
       </div>
@@ -83,13 +85,15 @@ const Footer = () => {
               {link}
             </span>
           ))}
-          <button 
+          <Button 
+            variant="ghost"
+            size="sm"
             onClick={scrollToTop}
-            className="flex items-center space-x-2 hover:text-white transition-colors"
+            className="hover:text-white"
           >
             <span>TOP</span>
-            <ChevronUp size={14} />
-          </button>
+            <ChevronUp size={14} className="ml-2" />
+          </Button>
         </div>
       </div>
     </footer>

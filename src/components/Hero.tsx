@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 const Hero = () => {
   return (
@@ -30,10 +31,10 @@ const Hero = () => {
             <p className="text-zinc-300 font-light">每一套西装，都是你态度的表达</p>
           </div>
           
-          <button className="flex items-center space-x-4 border border-white/40 bg-white/5 backdrop-blur-sm text-white px-8 py-3 hover:bg-white hover:text-black transition-all duration-300 group">
+          <Button variant="outline" className="border-white/40 bg-white/5 backdrop-blur-sm text-white hover:bg-white hover:text-black">
             <span className="uppercase text-sm tracking-widest">探索西装系列</span>
-            <ArrowRight size={18} className="group-hover:translate-x-2 transition-transform" />
-          </button>
+            <ArrowRight size={18} className="ml-4 group-hover:translate-x-2 transition-transform" />
+          </Button>
         </div>
 
         {/* Pagination */}

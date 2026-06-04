@@ -1,4 +1,6 @@
 import React from 'react';
+import { Input as ShadcnInput } from '@/components/ui/input';
+import { Field, FieldLabel, FieldError } from '@/components/ui/field';
 
 interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   label?: string;
@@ -12,19 +14,13 @@ export default function Input({
   ...props
 }: InputProps) {
   return (
-    <div className="flex flex-col space-y-1">
-      {label && (
-        <label className="text-sm font-medium text-gray-700">
-          {label}
-        </label>
-      )}
-      <input
-        className={`px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-luxury-black focus:border-transparent ${error ? 'border-red-500' : ''} ${className}`}
+    <Field>
+      {label && <FieldLabel>{label}</FieldLabel>}
+      <ShadcnInput
+        className={error ? 'border-destructive' : ''}
         {...props}
       />
-      {error && (
-        <span className="text-sm text-red-500">{error}</span>
-      )}
-    </div>
+      {error && <FieldError>{error}</FieldError>}
+    </Field>
   );
 }
