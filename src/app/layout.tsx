@@ -27,9 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
       <body className={inter.className}>
-        <NavbarWrapper />
         {children}
-        <Footer />
       </body>
     </html>
   );
